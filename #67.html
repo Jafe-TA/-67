@@ -1,0 +1,40 @@
+<!--
+
+- Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse dentro del mismo cambiar 
+el color a letra roja y color de fondo amarillo, luego cuando se mueva la flecha del mouse fuera del elemento volver al color original.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo de JavaScript</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<input type="text" id="texto" maxlength="40" size="50">
+<br>
+<p>Caracteres disponibles:<span id="cantidad">40</span></p>
+
+<script>
+addEventListener('DOMContentLoaded',inicio,false);
+
+function inicio()
+{
+document.getElementById('texto').addEventListener('keyup',presion,false);
+}
+
+function presion()
+{
+var canti=document.getElementById('texto').value.length;
+var disponibles=40-parseInt(canti);
+document.getElementById('cantidad').innerHTML=disponibles;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
